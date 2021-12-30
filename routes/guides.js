@@ -23,6 +23,7 @@ router.post("/", async (req, res) => {
         title: req.body.title,
         desc: req.body.desc,
         thumbnail: req.body.thumbnail,
+        headerimg: req.body.headerimg,
         content: req.body.content,
     });
 
@@ -50,6 +51,7 @@ router.put("/:id", async (req, res) => {
             title: req.body.title,
             desc: req.body.desc,
             thumbnail: req.body.thumbnail,
+            headerimg: req.body.headerimg,
             content: req.body.content,
         },
         {

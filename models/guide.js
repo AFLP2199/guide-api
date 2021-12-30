@@ -5,6 +5,7 @@ const guideSchema = new mongoose.Schema({
     title: { type: String, required: true },
     desc: { type: String, required: true },
     thumbnail: { type: String },
+    headerimg: { type: String },
     content: [
         {
             pageTitle: { type: String, required: true },
@@ -21,6 +22,7 @@ function validateGuide(guide) {
         title: Joi.string().min(3).max(50).required(),
         desc: Joi.string().min(3).required(),
         thumbnail: Joi.string(),
+        headerimg: Joi.string(),
         content: Joi.array().items(
             Joi.object({
                 pageTitle: Joi.string().min(3).required().label("Page title"),
