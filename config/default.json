@@ -1,0 +1,5 @@
+{
+    "db": "mongodb://localhost/hackctf",
+    "port": "3200"
+}
+  
